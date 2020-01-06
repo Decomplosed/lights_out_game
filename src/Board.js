@@ -88,10 +88,22 @@ class Board extends Component {
 
 
   /** Render game board or winning message. */
-
   render() {
-
-    return <h1>Board</h1>
+    let tblBoard = []
+    for (let y = 0; y < this.props.nrows; y++) {
+      let row = []
+      for (let x = 0; x < this.props.ncols; x++) {
+        row.push(<Cell isLit={this.state.board[y][x]} />)
+      }
+      tblBoard.push(<tr>{row}</tr>)
+    }
+    return (
+      <table className="Board">
+        <tbody>
+          {tblBoard}
+        </tbody>
+      </table>
+    )
   }
 }
 
