@@ -91,13 +91,7 @@ class Board extends Component {
 
   render() {
 
-    // if the game is won, just show a winning msg & render nothing else
-
-    // TODO
-
-    // make table board
-
-    // TODO
+    return <h1>Board</h1>
   }
 }
 
