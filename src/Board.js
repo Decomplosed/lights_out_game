@@ -19,8 +19,6 @@ class Board extends Component {
     }
   }
 
-  /** create a board nrows high/ncols wide, each cell randomly lit or unlit */
-
   createBoard() {
     let board = [];
 
@@ -35,8 +33,6 @@ class Board extends Component {
     return board
   }
 
-  /** handle changing a cell: update board & determine if winner */
-
   flipCellsAround(coord) {
     let { ncols, nrows } = this.props;
     let board = this.state.board;
@@ -44,7 +40,6 @@ class Board extends Component {
 
 
     function flipCell(y, x) {
-      // if this coord is actually on board, flip it
 
       if (x >= 0 && x < ncols && y >= 0 && y < nrows) {
         board[y][x] = !board[y][x];
