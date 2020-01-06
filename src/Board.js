@@ -111,6 +111,7 @@ class Board extends Component {
       }
       tblBoard.push(<tr key={y}>{row}</tr>)
     }
+
     return (
       <table className="Board">
         <tbody>
