@@ -89,7 +89,7 @@ class Board extends Component {
     // win when every cell is turned off
     // TODO: determine is the game has been won
 
-    let hasWon = false
+    let hasWon = board.every(row => row.every(cell => !cell))
 
     this.setState({ board: board, hasWon: hasWon });
   }
